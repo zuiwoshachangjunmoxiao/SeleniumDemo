@@ -2,6 +2,7 @@ package SeleniumProj;
 
 import static org.junit.Assert.*;
 
+import java.nio.channels.SeekableByteChannel;
 import java.sql.Driver;
 
 import org.junit.After;
@@ -41,6 +42,19 @@ public class AssertStudy01 {
 		//断言网页的标题
 		assertEquals("百度一下，你就知道",title1);
 		Thread.sleep(3000);
+		
+		//String类的contains方法，返回一个布尔类型的值
+		String a = "asdfgh";
+		boolean b = a.contains("asd");
+		System.out.println(b);
+		
+		//断言网页标题是否包含“百度”
+		String title2 = driver.getTitle();
+		boolean t2 = title2.contains("百度");
+		assertTrue(t2);
+		
+		//上面三行代码的简洁写法
+		assertTrue(driver.getTitle().contains("百度"));
 	}
 
 }
