@@ -43,6 +43,9 @@ public class AssertStudy01 {
 		assertEquals("百度一下，你就知道",title1);
 		Thread.sleep(3000);
 		
+		//以上代码的简洁写法
+		assertEquals("百度一下，你就知道", driver.getTitle());
+		
 		//String类的contains方法，返回一个布尔类型的值
 		String a = "asdfgh";
 		boolean b = a.contains("asd");
