@@ -8,7 +8,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 * @version 创建时间：2017年9月20日 上午11:14:26 
 * 用selenium的getPageSource方法获取页面的源码，在Java的main方法中实现。
 */
-public class GetPageSourceJava {
+public class getPageSourceJava {
 	
 
 	public static void main(String[] args) {

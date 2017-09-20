@@ -37,6 +37,10 @@ public class AssertStudy01 {
 
 	@Ignore
 	public void test() throws Exception {
+		/*
+		 * 断言标题title
+		 */
+		
 		driver.get("http://www.baidu.com");
 		//获取网页的标题
 		String title1 = driver.getTitle();
@@ -63,8 +67,12 @@ public class AssertStudy01 {
 		assertTrue(driver.getTitle().contains("百度"));
 	}
 	
-	@Test
+	@Ignore
 	public void test1() throws Exception {
+		/*
+		 * 断言标签的文本
+		 */
+		
 		driver.get(baseUrl);
 		//浏览器最大化
 		driver.manage().window().maximize();
@@ -80,6 +88,16 @@ public class AssertStudy01 {
 		
 		//断言网页的纯文本或链接的文本内容包含预期值，预期值为：设为主页
 		assertTrue(driver.findElement(By.xpath(".//*[@id='setf']")).getText().contains("设为主页"));
+	}
+	
+	@Test
+	public void test2() throws Exception {
+		/*
+		 * 断言文本框、按钮的value值
+		 */
+		
+		driver.get(baseUrl);
+		
 	}
 
 }

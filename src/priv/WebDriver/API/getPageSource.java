@@ -13,7 +13,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 * @version 创建时间：2017年9月20日 上午11:07:53 
 * 类说明 
 */
-public class GetPageSource {
+public class getPageSource {
 	WebDriver driver;
 	String baseUrl = "http://10.10.192.94:8082/fuhe24-collection";
 	

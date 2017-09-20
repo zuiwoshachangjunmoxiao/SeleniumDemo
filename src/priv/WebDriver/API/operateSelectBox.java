@@ -1,4 +1,4 @@
-package SeleniumProj;
+package priv.WebDriver.API;
 
 import static org.junit.Assert.*;
 
@@ -9,15 +9,15 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.Select;
 
-import com.sun.org.apache.bcel.internal.generic.Select;
 
 /** 
 * @author 作者：BarryAllen
 * @version 创建时间：2017年9月18日 下午3:53:45 
 * new一个新的test case 
 */
-public class NewTestCaseDemo {
+public class operateSelectBox {
 	WebDriver driver;
 
 	@Before
@@ -49,7 +49,7 @@ public class NewTestCaseDemo {
 		//定位下拉框
 		WebElement b = driver.findElement(By.id("brand"));
 		//封装为Select对象
-		org.openqa.selenium.support.ui.Select bs = new org.openqa.selenium.support.ui.Select(b);
+		Select bs = new Select(b);
 		//方法一：通过选项文本选择一个下拉框选项
 		bs.selectByVisibleText("联想");
 		Thread.sleep(3000);
