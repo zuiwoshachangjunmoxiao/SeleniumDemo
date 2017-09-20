@@ -2,12 +2,15 @@ package SeleniumProj;
 
 import static org.junit.Assert.*;
 
+import java.awt.print.Printable;
 import java.nio.channels.SeekableByteChannel;
 import java.sql.Driver;
 
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -32,7 +35,7 @@ public class AssertStudy01 {
 		driver.quit();
 	}
 
-	@Test
+	@Ignore
 	public void test() throws Exception {
 		driver.get("http://www.baidu.com");
 		//获取网页的标题
@@ -58,6 +61,25 @@ public class AssertStudy01 {
 		
 		//上面三行代码的简洁写法
 		assertTrue(driver.getTitle().contains("百度"));
+	}
+	
+	@Test
+	public void test1() throws Exception {
+		driver.get(baseUrl);
+		//浏览器最大化
+		driver.manage().window().maximize();
+		//获取标签的文本
+		String s1 = driver.findElement(By.xpath(".//*[@id='setf']")).getText();
+		System.out.println(s1);
+		//断言标签文本是否和预期值一样
+		assertEquals("把百度设为主页", s1);
+		
+		//以上代码的简洁写法
+		//断言标签的文本和预期值是否一样
+		assertEquals("把百度设为主页", driver.findElement(By.xpath(".//*[@id='setf']")).getText());
+		
+		//断言网页的纯文本或链接的文本内容包含预期值，预期值为：设为主页
+		assertTrue(driver.findElement(By.xpath(".//*[@id='setf']")).getText().contains("设为主页"));
 	}
 
 }

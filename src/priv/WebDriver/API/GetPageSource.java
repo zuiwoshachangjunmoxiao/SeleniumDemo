@@ -1,4 +1,4 @@
-package SeleniumProj;
+package priv.WebDriver.API;
 
 import static org.junit.Assert.*;
 
