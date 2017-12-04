@@ -13,31 +13,31 @@ import org.openqa.selenium.support.ui.Select;
 
 
 /** 
-* @author ×÷Õß£ºBarryAllen
-* @version ´´½¨Ê±¼ä£º2017Äê9ÔÂ18ÈÕ ÏÂÎç3:53:45 
-* newÒ»¸öĞÂµÄtest case 
+* @author ä½œè€…ï¼šBarryAllen
+* @version åˆ›å»ºæ—¶é—´ï¼š2017å¹´9æœˆ18æ—¥ ä¸‹åˆ3:53:45 
+* newä¸€ä¸ªæ–°çš„test caseï¼Œæ“ä½œä¸‹æ‹‰æ¡†ï¼Œ3ç§æ–¹æ³•é€‰æ‹©ä¸‹æ‹‰æ¡†ä¸­çš„å…ƒç´ 
 */
 public class operateSelectBox {
 	WebDriver driver;
 
 	@Before
 	public void setUp() throws Exception {
-		//´ò¿ªä¯ÀÀÆ÷
+		//æ‰“å¼€æµè§ˆå™¨
 		driver = new FirefoxDriver();
 	}
 
 	@After
 	public void tearDown() throws Exception {
-		//¹Ø±Õä¯ÀÀÆ÷
+		//å…³é—­æµè§ˆå™¨
 		driver.quit();
 		
 	}
 
 	@Test
 	public void test() throws Exception {
-		//Æô¶¯ä¯ÀÀÆ÷ºó£¬´ò¿ªÒ»¸öÍøÒ³
+		//å¯åŠ¨æµè§ˆå™¨åï¼Œæ‰“å¼€ä¸€ä¸ªç½‘é¡µ
 		driver.get("http://www.baidu.com/");
-		//µÈ´ı3s=3000ºÁÃë
+		//ç­‰å¾…3s=3000æ¯«ç§’
 		try {
 			Thread.sleep(3000);
 		} catch (InterruptedException e) {
@@ -46,18 +46,18 @@ public class operateSelectBox {
 		}
 		fail("Not yet implemented");
 		
-		//¶¨Î»ÏÂÀ­¿ò
+		//å®šä½ä¸‹æ‹‰æ¡†
 		WebElement b = driver.findElement(By.id("brand"));
-		//·â×°ÎªSelect¶ÔÏó
+		//å°è£…ä¸ºSelectå¯¹è±¡
 		Select bs = new Select(b);
-		//·½·¨Ò»£ºÍ¨¹ıÑ¡ÏîÎÄ±¾Ñ¡ÔñÒ»¸öÏÂÀ­¿òÑ¡Ïî
-		bs.selectByVisibleText("ÁªÏë");
+		//æ–¹æ³•ä¸€ï¼šé€šè¿‡é€‰é¡¹æ–‡æœ¬é€‰æ‹©ä¸€ä¸ªä¸‹æ‹‰æ¡†é€‰é¡¹
+		bs.selectByVisibleText("è”æƒ³");
 		Thread.sleep(3000);
-		//·½·¨¶ş£ºÍ¨¹ıÑ¡Ïî±àºÅÑ¡ÔñÒ»¸öÏÂÀ­¿òÑ¡Ïî
+		//æ–¹æ³•äºŒï¼šé€šè¿‡é€‰é¡¹ç¼–å·é€‰æ‹©ä¸€ä¸ªä¸‹æ‹‰æ¡†é€‰é¡¹
 		bs.selectByIndex(2);
 		Thread.sleep(3000);
-		//·½·¨Èı£ºÍ¨¹ıÑ¡ÏîµÄÖµ£¨valueÊôĞÔµÄÖµ£©Ñ¡ÔñÒ»¸öÏÂÀ­¿òÑ¡Ïî
-		bs.selectByValue("ÁªÏë");
+		//æ–¹æ³•ä¸‰ï¼šé€šè¿‡é€‰é¡¹çš„å€¼ï¼ˆvalueå±æ€§çš„å€¼ï¼‰é€‰æ‹©ä¸€ä¸ªä¸‹æ‹‰æ¡†é€‰é¡¹
+		bs.selectByValue("è”æƒ³");
 		Thread.sleep(3000);
 		
 	}
