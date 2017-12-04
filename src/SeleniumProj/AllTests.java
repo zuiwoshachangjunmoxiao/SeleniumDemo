@@ -6,8 +6,8 @@ import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
 @SuiteClasses({ 
-	FHCBPapersSearchTesting4.class, 
-	FHCBPapersSearchTesting.class 
+	TestDemo01.class, 
+	TestDemo02.class 
 	
 })
 public class AllTests {
