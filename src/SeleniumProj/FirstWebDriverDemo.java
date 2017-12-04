@@ -8,16 +8,16 @@ public class FirstWebDriverDemo {
 		WebDriver driver;
 		String baseUrl;
 		
-		//Éè¶¨Firefoxä¯ÀÀÆ÷µÄ°²×°Â·¾¶
+		//è®¾å®šFirefoxæµè§ˆå™¨çš„å®‰è£…è·¯å¾„.
 		System.setProperty("webdriver.firefox.bin", "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe");
 		
 		driver = new FirefoxDriver();
 		baseUrl = "http://www.baidu.com/";
-		//´ò¿ªËÑ¹·Ê×Ò³
+		//æ‰“å¼€æœç‹—é¦–é¡µ
 		driver.get(baseUrl + "/");
-		//ÔÚËÑË÷ÊäÈë¿òÖĞÊäÈë¡°¹âÈÙÖ®Â·×Ô¶¯»¯²âÊÔ¡±
-		driver.findElement(By.id("kw")).sendKeys("¹âÈÙÖ®Â·×Ô¶¯»¯²âÊÔ");
-		//µ¥»÷¡°ËÑË÷¡±°´Å¥
+		//åœ¨æœç´¢è¾“å…¥æ¡†ä¸­è¾“å…¥â€œå…‰è£ä¹‹è·¯è‡ªåŠ¨åŒ–æµ‹è¯•â€
+		driver.findElement(By.id("kw")).sendKeys("å…‰è£ä¹‹è·¯è‡ªåŠ¨åŒ–æµ‹è¯•");
+		//å•å‡»â€œæœç´¢â€æŒ‰é’®
 		driver.findElement(By.id("su")).click();
 		
 
