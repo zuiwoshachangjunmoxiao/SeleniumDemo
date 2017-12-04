@@ -15,7 +15,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 */
 public class getPageSource {
 	WebDriver driver;
-	String baseUrl = "http://product.dangdang.com/25192738.html";
+	String baseUrl = "http://product.dangdang.com/23206438.html";
 	
 	@Before
 	public void setUp() throws Exception {
