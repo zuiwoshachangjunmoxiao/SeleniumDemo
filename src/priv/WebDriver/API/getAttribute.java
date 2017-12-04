@@ -11,9 +11,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 /** 
-* @author ×÷Õß£ºBarryAllen
-* @version ´´½¨Ê±¼ä£º2017Äê9ÔÂ20ÈÕ ÏÂÎç4:20:18 
-* getAttribute »ñÈ¡ ÎÄ±¾¿ò¡¢°´Å¥µÈÔªËØµÄÊôĞÔÖµ£¬ÀıÈç£º»ñÈ¡ valueÖµ,·µ»ØÖµÊÇÒ»¸ö×Ö·û´®¡£
+* @author ä½œè€…ï¼šBarryAllen
+* @version åˆ›å»ºæ—¶é—´ï¼š2017å¹´9æœˆ20æ—¥ ä¸‹åˆ4:20:18 
+* getAttribute è·å– æ–‡æœ¬æ¡†ã€æŒ‰é’®ç­‰å…ƒç´ çš„å±æ€§å€¼ï¼Œä¾‹å¦‚ï¼šè·å– valueå€¼,è¿”å›å€¼æ˜¯ä¸€ä¸ªå­—ç¬¦ä¸²
 */
 public class getAttribute {
 	WebDriver driver;
@@ -34,45 +34,45 @@ public class getAttribute {
 	public void test() {
 		driver.get("https://www.baidu.com/");
 		driver.findElement(By.id("kw")).clear();
-		driver.findElement(By.id("kw")).sendKeys("Ê¹ÓÃ getAttribute ·½·¨»ØÈ¥ÎÄ±¾¿òµÄvalueÖµ");
-		//»ñÈ¡ÊäÈë¿òµÄvalueÖµ
+		driver.findElement(By.id("kw")).sendKeys("ä½¿ç”¨ getAttribute æ–¹æ³•å›å»æ–‡æœ¬æ¡†çš„valueå€¼");
+		//è·å–è¾“å…¥æ¡†çš„valueå€¼
 		System.out.println(driver.findElement(By.id("kw")).getAttribute("value"));
-		//¶ÏÑÔÊäÈë¿òµÄvalueÖµ
-		assertEquals("Ê¹ÓÃ getAttribute ·½·¨»ØÈ¥ÎÄ±¾¿òµÄvalueÖµ", driver.findElement(By.id("kw")).getAttribute("value"));
-		//»ñÈ¡°Ù¶ÈÒ»ÏÂ°´Å¥µÄvalueÖµ
+		//æ–­è¨€è¾“å…¥æ¡†çš„valueå€¼
+		assertEquals("ä½¿ç”¨ getAttribute æ–¹æ³•å›å»æ–‡æœ¬æ¡†çš„valueå€¼", driver.findElement(By.id("kw")).getAttribute("value"));
+		//è·å–ç™¾åº¦ä¸€ä¸‹æŒ‰é’®çš„valueå€¼
 		System.out.println(driver.findElement(By.id("su")).getAttribute("value"));
-		//¶ÏÑÔ°Ù¶ÈÒ»ÏÂ°´Å¥µÄvalueÖµ
-		assertEquals("°Ù¶ÈÒ»ÏÂ", driver.findElement(By.id("su")).getAttribute("value"));
-		assertTrue(driver.findElement(By.id("su")).getAttribute("value").contains("°Ù¶È"));
+		//æ–­è¨€ç™¾åº¦ä¸€ä¸‹æŒ‰é’®çš„valueå€¼
+		assertEquals("ç™¾åº¦ä¸€ä¸‹", driver.findElement(By.id("su")).getAttribute("value"));
+		assertTrue(driver.findElement(By.id("su")).getAttribute("value").contains("ç™¾åº¦"));
 		
-		//»ñÈ¡ÊäÈë¿òµÄclassÖµ
+		//è·å–è¾“å…¥æ¡†çš„classå€¼
 		System.out.println(driver.findElement(By.id("kw")).getAttribute("class"));
-		//»ñÈ¡°Ù¶ÈÒ»ÏÂ°´Å¥µÄtypeÖµ
+		//è·å–ç™¾åº¦ä¸€ä¸‹æŒ‰é’®çš„typeå€¼
 		System.out.println(driver.findElement(By.id("su")).getAttribute("type"));
 		
-		//»ñÈ¡°Ù¶ÈÒ»ÏÂÍ¼Æ¬µÄsrcÊôĞÔ
+		//è·å–ç™¾åº¦ä¸€ä¸‹å›¾ç‰‡çš„srcå±æ€§
 		System.out.println(driver.findElement(By.xpath(".//*[@id='lg']/img")).getAttribute("src"));
-		//¶ÏÑÔ°Ù¶ÈÒ»ÏÂÍ¼Æ¬µÄsrcÊôĞÔ£¬¼´Í¼Æ¬Ãû³ÆÊÇ·ñ°üº¬bd
+		//æ–­è¨€ç™¾åº¦ä¸€ä¸‹å›¾ç‰‡çš„srcå±æ€§ï¼Œå³å›¾ç‰‡åç§°æ˜¯å¦åŒ…å«bd
 		assertTrue(driver.findElement(By.xpath(".//*[@id='lg']/img")).getAttribute("src").contains("bd"));
 		
-//		//¶ÏÑÔµ¥Ñ¡°´Å¥»òÕß¸´Ñ¡¿ò±»Ñ¡ÖĞ
+//		//æ–­è¨€å•é€‰æŒ‰é’®æˆ–è€…å¤é€‰æ¡†è¢«é€‰ä¸­
 //		assertTrue(driver.findElement(By.xpath("XXXXX")).isSelected());
-//		//¶ÏÑÔµ¥Ñ¡°´Å¥»òÕß¸´Ñ¡¿òÃ»ÓĞ±»Ñ¡ÖĞ
+//		//æ–­è¨€å•é€‰æŒ‰é’®æˆ–è€…å¤é€‰æ¡†æ²¡æœ‰è¢«é€‰ä¸­
 //		assertFalse(driver.findElement(By.xpath("XXXXX")).isSelected());
-//		//¶ÏÑÔÒ»×é¸´Ñ¡¿ò»òµ¥Ñ¡°´Å¥£¬µÚÒ»¸ö¸´Ñ¡¿ò±»Ñ¡ÖĞ£¬µÚ¶ş¸öºÍµÚÈı¸ö¸´Ñ¡¿òÃ»ÓĞ±»Ñ¡ÖĞ
+//		//æ–­è¨€ä¸€ç»„å¤é€‰æ¡†æˆ–å•é€‰æŒ‰é’®ï¼Œç¬¬ä¸€ä¸ªå¤é€‰æ¡†è¢«é€‰ä¸­ï¼Œç¬¬äºŒä¸ªå’Œç¬¬ä¸‰ä¸ªå¤é€‰æ¡†æ²¡æœ‰è¢«é€‰ä¸­
 //		assertTrue(driver.findElements(By.name("XXXXX")).get(0).isSelected());
 //		assertFalse(driver.findElements(By.name("XXXXX")).get(1).isSelected());
 //		assertFalse(driver.findElements(By.name("XXXXX")).get(2).isSelected());
 //		
-//		//¶ÏÑÔÒ»×é¸´Ñ¡¿ò»òµ¥Ñ¡°´Å¥£¬µÚÒ»¸ö±»Ñ¡ÖĞ£¬µÚ¶ş¸öµ½µÚÎå¸öÃ»ÓĞ±»Ñ¡ÖĞ£¬¿ÉÒÔÊ¹ÓÃforÑ­»·À´ÓÅ»¯´úÂë
+//		//æ–­è¨€ä¸€ç»„å¤é€‰æ¡†æˆ–å•é€‰æŒ‰é’®ï¼Œç¬¬ä¸€ä¸ªè¢«é€‰ä¸­ï¼Œç¬¬äºŒä¸ªåˆ°ç¬¬äº”ä¸ªæ²¡æœ‰è¢«é€‰ä¸­ï¼Œå¯ä»¥ä½¿ç”¨forå¾ªç¯æ¥ä¼˜åŒ–ä»£ç 
 //		for(int i=1;i<5;i++){
 //			assertFalse(driver.findElements(By.name("XXXXX")).get(i).isSelected());
 //		}
 		
-//		//¶ÏÑÔÄ³Ò»×éµ¥Ñ¡°´Å¥»ò¸´Ñ¡¿òµÄ¸öÊıÊÇ5¸ö
+//		//æ–­è¨€æŸä¸€ç»„å•é€‰æŒ‰é’®æˆ–å¤é€‰æ¡†çš„ä¸ªæ•°æ˜¯5ä¸ª
 //		assertEquals(5,driver.findElements(By.name("XXXXX")).size());
 //		
-//		//¶ÏÑÔÒ»¸öÔªËØÊÇ·ñ´æÔÚ,»òÕß¶ÏÑÔÖ¸¶¨µÄÔªËØÊÇ·ñ³öÏÖ
+//		//æ–­è¨€ä¸€ä¸ªå…ƒç´ æ˜¯å¦å­˜åœ¨,æˆ–è€…æ–­è¨€æŒ‡å®šçš„å…ƒç´ æ˜¯å¦å‡ºç°
 //		assertTrue(isElementPresent(By.xpath("XXXXX")));
 //	}
 //	
