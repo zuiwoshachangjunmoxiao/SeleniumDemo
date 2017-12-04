@@ -6,44 +6,44 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import priv.DataCollection.GetDateTime;
 
 /** 
-* @author ×÷Õß£ºBarryAllen
-* @version ´´½¨Ê±¼ä£º2017Äê9ÔÂ26ÈÕ ÏÂÎç3:41:03 
-* ÀàËµÃ÷ 
+* @author ä½œè€…ï¼šBarryAllen
+* @version åˆ›å»ºæ—¶é—´ï¼š2017å¹´9æœˆ26æ—¥ ä¸‹åˆ3:41:03 
+* é‡‡é›†è·å–æ–°æµªè‚¡ç¥¨é¡µé¢çš„ä¿¡æ¯ 
 */
 public class SinaStockColl {
 	public WebDriver driver;
 	public GetDateTime dataTime;
 	String baseUrl = "http://blog.sina.com.cn/s/blog_4e3980540102xzck.html";
 	
-	//´ò¿ªä¯ÀÀÆ÷
+	//æ‰“å¼€æµè§ˆå™¨
 	public void OpenBrowser(){
 		System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
 		driver = new FirefoxDriver();
 	}
 	
-	//¹Ø±Õ±êÇ©Ò³
+	//å…³é—­æ ‡ç­¾é¡µ
 	public void QuitBrowser(){
 		driver.quit();
 	}
 	
 	public void test1(){
 		driver.get(baseUrl);
-		//»ñÈ¡ÌâÃû
+		//è·å–é¢˜å
 		String Title = driver.findElement(By.className("titName SG_txta")).getText();
-		//»ñÈ¡×÷Õß
+		//è·å–ä½œè€…
 		String Author = driver.findElement(By.id("ownernick")).getText();
-		//»ñÈ¡·¢²¼Ê±¼ä
+		//è·å–å‘å¸ƒæ—¶é—´
 		String Time = driver.findElement(By.className("time SG_txtc")).getText();
-		//»ñÈ¡È«ÎÄ
+		//è·å–å…¨æ–‡
 		String Article = driver.findElement(By.id("sina_keyword_ad_area2")).getText();
-		//»ñÈ¡±êÇ©blog_tag
+		//è·å–æ ‡ç­¾blog_tag
 		String Lable = driver.findElement(By.className("blog_tag")).getText();
-		//»ñÈ¡µ±Ç°URL
+		//è·å–å½“å‰URL
 		String CurrentPageUrl = driver.getCurrentUrl();
-		//»ñÈ¡µ±Ç°Ê±¼ä
+		//è·å–å½“å‰æ—¶é—´ï¼Œä½¿ç”¨äº†è‡ªå·±å°è£…çš„GetDateTimeç±»
 		String CurrentTime = dataTime.getDataTime();
 		
-		//Êä³öÉÏÃæ»ñÈ¡µÄÄÚÈİ
+		//è¾“å‡ºä¸Šé¢è·å–çš„å†…å®¹
 		System.out.println(Title);
 		System.out.println(Author);
 		System.out.println(Time);
