@@ -18,20 +18,20 @@ public class FHCBPapersSearchTesting {
   @Before
   public void setUp() throws Exception {
     driver = new FirefoxDriver();
-    baseUrl = "http://10.10.192.92:8080/";
+    baseUrl = "http://00.00.000.00:8080/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
 
   @Test
   public void testTC001() throws Exception {
-    driver.get(baseUrl + "/fuhe24-portal/userlogin/userLogin/userLoginDetail.action");
+    driver.get(baseUrl + "/XXXXX/userlogin/userLogin/userLoginDetail.action");
     driver.findElement(By.id("loginId")).clear();
-    driver.findElement(By.id("loginId")).sendKeys("wfdata");
+    driver.findElement(By.id("loginId")).sendKeys("XXXXX");
     driver.findElement(By.id("password")).clear();
-    driver.findElement(By.id("password")).sendKeys("123456");
+    driver.findElement(By.id("password")).sendKeys("XXXXX");
     driver.findElement(By.cssSelector("input.dlbtn")).click();
     driver.findElement(By.id("searchCondition")).clear();
-    driver.findElement(By.id("searchCondition")).sendKeys("��ѧ");
+    driver.findElement(By.id("searchCondition")).sendKeys("»¯Ñ§");
     driver.findElement(By.id("searchBtn")).click();
     driver.findElement(By.id("dataTable_next")).click();
   }
