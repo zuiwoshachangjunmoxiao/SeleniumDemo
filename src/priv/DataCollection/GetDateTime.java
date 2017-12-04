@@ -1,8 +1,8 @@
 package priv.DataCollection;
 /** 
-* @author ×÷Õß£ºBarryAllen
-* @version ´´½¨Ê±¼ä£º2017Äê9ÔÂ26ÈÕ ÏÂÎç3:58:25 
-* ÀàËµÃ÷ 
+* @author ä½œè€…ï¼šBarryAllen
+* @version åˆ›å»ºæ—¶é—´ï¼š2017å¹´9æœˆ26æ—¥ ä¸‹åˆ3:58:25 
+* é€šè¿‡Dateå¯¹è±¡çš„date()æ–¹æ³•è·å–ç³»ç»Ÿå½“å‰æ—¶é—´ 
 */
 import java.text.DateFormat;  
 import java.text.SimpleDateFormat;  
@@ -13,16 +13,16 @@ import com.sun.jna.platform.unix.X11.XClientMessageEvent.Data;
 public class GetDateTime { 
 	
 	public String getDataTime(){
-        //´´½¨Ò»¸ödata format¶ÔÏó  
+        //åˆ›å»ºä¸€ä¸ªdata formatå¯¹è±¡  
         DateFormat dateformat= new SimpleDateFormat("yyyyMMdd-HHmmss");  
                       
-        //ÀûÓÃDate()»ñÈ¡µ±Ç°Ê±¼ä  
+        //åˆ©ç”¨Date()è·å–å½“å‰æ—¶é—´  
         Date date = new Date();  
                       
-        //¸ñÊ½»¯Ê±¼ä,²¢ÓÃString¶ÔÏó´æ´¢  
+        //æ ¼å¼åŒ–æ—¶é—´,å¹¶ç”¨Stringå¯¹è±¡å­˜å‚¨  
         String date1 = dateformat.format(date);  
                       
-        //´òÓ¡¸ñÊ½»¯Ê±¼äµ½¿ØÖÆÌ¨  
+        //æ‰“å°æ ¼å¼åŒ–æ—¶é—´åˆ°æ§åˆ¶å°  
         System.out.println(date1); 
         
 		return date1;
