@@ -4,20 +4,20 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 /** 
-* @author ×÷Õß£ºBarryAllen
-* @version ´´½¨Ê±¼ä£º2017Äê9ÔÂ20ÈÕ ÉÏÎç11:14:26 
-* ÓÃseleniumµÄgetPageSource·½·¨»ñÈ¡Ò³ÃæµÄÔ´Âë£¬ÔÚJavaµÄmain·½·¨ÖĞÊµÏÖ¡£
+* @author ä½œè€…ï¼šBarryAllen
+* @version åˆ›å»ºæ—¶é—´ï¼š2017å¹´9æœˆ20æ—¥ ä¸Šåˆ11:14:26 
+* ç”¨seleniumçš„getPageSourceæ–¹æ³•è·å–é¡µé¢çš„æºç ï¼Œåœ¨Javaçš„mainæ–¹æ³•ä¸­å®ç°ã€‚
 */
 public class getPageSourceJava {
 	
 
 	public static void main(String[] args) {
 		WebDriver driver;
-		String baseUrl = "http://10.10.192.94:8082/fuhe24-collection";
+		String baseUrl = "http://product.dangdang.com/23206438.html";
 		driver = new FirefoxDriver();
-		//´ò¿ªÍøÒ³
+		//æ‰“å¼€ç½‘é¡µ
 		driver.get(baseUrl);
-		//»ñÈ¡Ô´Âë
+		//è·å–æºç 
 		String pageSource1 = driver.getPageSource();
 		System.out.println(pageSource1);
 		
