@@ -16,9 +16,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 /** 
-* @author ×÷Õß£ºBarryAllen
-* @version ´´½¨Ê±¼ä£º2017Äê9ÔÂ19ÈÕ ÏÂÎç3:56:50 
-* ¶ÏÑÔÍøÒ³±êÌâµÈÓÚÔ¤ÆÚÖµ 
+* @author ä½œè€…ï¼šBarryAllen
+* @version åˆ›å»ºæ—¶é—´ï¼š2017å¹´9æœˆ19æ—¥ ä¸‹åˆ3:56:50 
+* æ–­è¨€ç½‘é¡µæ ‡é¢˜ç­‰äºé¢„æœŸå€¼ ã€‚
 */
 public class AssertStudy01 {
 	WebDriver driver;
@@ -38,62 +38,62 @@ public class AssertStudy01 {
 	@Ignore
 	public void test() throws Exception {
 		/*
-		 * ¶ÏÑÔ±êÌâtitle
+		 * æ–­è¨€æ ‡é¢˜title
 		 */
 		
 		driver.get("http://www.baidu.com");
-		//»ñÈ¡ÍøÒ³µÄ±êÌâ
+		//è·å–ç½‘é¡µçš„æ ‡é¢˜
 		String title1 = driver.getTitle();
-		//´òÓ¡title
+		//æ‰“å°title
 		System.out.println(title1);
-		//¶ÏÑÔÍøÒ³µÄ±êÌâ
-		assertEquals("°Ù¶ÈÒ»ÏÂ£¬Äã¾ÍÖªµÀ",title1);
+		//æ–­è¨€ç½‘é¡µçš„æ ‡é¢˜
+		assertEquals("ç™¾åº¦ä¸€ä¸‹ï¼Œä½ å°±çŸ¥é“",title1);
 		Thread.sleep(3000);
 		
-		//ÒÔÉÏ´úÂëµÄ¼ò½àĞ´·¨
-		assertEquals("°Ù¶ÈÒ»ÏÂ£¬Äã¾ÍÖªµÀ", driver.getTitle());
+		//ä»¥ä¸Šä»£ç çš„ç®€æ´å†™æ³•
+		assertEquals("ç™¾åº¦ä¸€ä¸‹ï¼Œä½ å°±çŸ¥é“", driver.getTitle());
 		
-		//StringÀàµÄcontains·½·¨£¬·µ»ØÒ»¸ö²¼¶ûÀàĞÍµÄÖµ
+		//Stringç±»çš„containsæ–¹æ³•ï¼Œè¿”å›ä¸€ä¸ªå¸ƒå°”ç±»å‹çš„å€¼
 		String a = "asdfgh";
 		boolean b = a.contains("asd");
 		System.out.println(b);
 		
-		//¶ÏÑÔÍøÒ³±êÌâÊÇ·ñ°üº¬¡°°Ù¶È¡±
+		//æ–­è¨€ç½‘é¡µæ ‡é¢˜æ˜¯å¦åŒ…å«â€œç™¾åº¦â€
 		String title2 = driver.getTitle();
-		boolean t2 = title2.contains("°Ù¶È");
+		boolean t2 = title2.contains("ç™¾åº¦");
 		assertTrue(t2);
 		
-		//ÉÏÃæÈıĞĞ´úÂëµÄ¼ò½àĞ´·¨
-		assertTrue(driver.getTitle().contains("°Ù¶È"));
+		//ä¸Šé¢ä¸‰è¡Œä»£ç çš„ç®€æ´å†™æ³•
+		assertTrue(driver.getTitle().contains("ç™¾åº¦"));
 	}
 	
 	@Ignore
 	public void test1() throws Exception {
 		/*
-		 * ¶ÏÑÔ±êÇ©µÄÎÄ±¾
+		 * æ–­è¨€æ ‡ç­¾çš„æ–‡æœ¬
 		 */
 		
 		driver.get(baseUrl);
-		//ä¯ÀÀÆ÷×î´ó»¯
+		//æµè§ˆå™¨æœ€å¤§åŒ–
 		driver.manage().window().maximize();
-		//»ñÈ¡±êÇ©µÄÎÄ±¾
+		//è·å–æ ‡ç­¾çš„æ–‡æœ¬
 		String s1 = driver.findElement(By.xpath(".//*[@id='setf']")).getText();
 		System.out.println(s1);
-		//¶ÏÑÔ±êÇ©ÎÄ±¾ÊÇ·ñºÍÔ¤ÆÚÖµÒ»Ñù
-		assertEquals("°Ñ°Ù¶ÈÉèÎªÖ÷Ò³", s1);
+		//æ–­è¨€æ ‡ç­¾æ–‡æœ¬æ˜¯å¦å’Œé¢„æœŸå€¼ä¸€æ ·
+		assertEquals("æŠŠç™¾åº¦è®¾ä¸ºä¸»é¡µ", s1);
 		
-		//ÒÔÉÏ´úÂëµÄ¼ò½àĞ´·¨
-		//¶ÏÑÔ±êÇ©µÄÎÄ±¾ºÍÔ¤ÆÚÖµÊÇ·ñÒ»Ñù
-		assertEquals("°Ñ°Ù¶ÈÉèÎªÖ÷Ò³", driver.findElement(By.xpath(".//*[@id='setf']")).getText());
+		//ä»¥ä¸Šä»£ç çš„ç®€æ´å†™æ³•
+		//æ–­è¨€æ ‡ç­¾çš„æ–‡æœ¬å’Œé¢„æœŸå€¼æ˜¯å¦ä¸€æ ·
+		assertEquals("æŠŠç™¾åº¦è®¾ä¸ºä¸»é¡µ", driver.findElement(By.xpath(".//*[@id='setf']")).getText());
 		
-		//¶ÏÑÔÍøÒ³µÄ´¿ÎÄ±¾»òÁ´½ÓµÄÎÄ±¾ÄÚÈİ°üº¬Ô¤ÆÚÖµ£¬Ô¤ÆÚÖµÎª£ºÉèÎªÖ÷Ò³
-		assertTrue(driver.findElement(By.xpath(".//*[@id='setf']")).getText().contains("ÉèÎªÖ÷Ò³"));
+		//æ–­è¨€ç½‘é¡µçš„çº¯æ–‡æœ¬æˆ–é“¾æ¥çš„æ–‡æœ¬å†…å®¹åŒ…å«é¢„æœŸå€¼ï¼Œé¢„æœŸå€¼ä¸ºï¼šè®¾ä¸ºä¸»é¡µ
+		assertTrue(driver.findElement(By.xpath(".//*[@id='setf']")).getText().contains("è®¾ä¸ºä¸»é¡µ"));
 	}
 	
 	@Test
 	public void test2() throws Exception {
 		/*
-		 * ¶ÏÑÔÎÄ±¾¿ò¡¢°´Å¥µÄvalueÖµ
+		 * æ–­è¨€æ–‡æœ¬æ¡†ã€æŒ‰é’®çš„valueå€¼
 		 */
 		
 		driver.get(baseUrl);
