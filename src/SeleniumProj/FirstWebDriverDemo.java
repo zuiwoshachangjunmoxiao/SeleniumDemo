@@ -8,7 +8,7 @@ public class FirstWebDriverDemo {
 		WebDriver driver;
 		String baseUrl;
 		
-		//设定Firefox浏览器的安装路径.
+		//设定Firefox浏览器的安装路径
 		System.setProperty("webdriver.firefox.bin", "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe");
 		
 		driver = new FirefoxDriver();
