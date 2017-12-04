@@ -9,13 +9,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 /** 
-* @author ×÷Õß£ºBarryAllen
-* @version ´´½¨Ê±¼ä£º2017Äê9ÔÂ20ÈÕ ÉÏÎç11:07:53 
-* ÀàËµÃ÷ 
+* @author ä½œè€…ï¼šBarryAllen
+* @version åˆ›å»ºæ—¶é—´ï¼š2017å¹´9æœˆ20æ—¥ ä¸Šåˆ11:07:53 
+* ç±»è¯´æ˜ 
 */
 public class getPageSource {
 	WebDriver driver;
-	String baseUrl = "http://10.10.192.94:8082/fuhe24-collection";
+	String baseUrl = "http://product.dangdang.com/25192738.html";
 	
 	@Before
 	public void setUp() throws Exception {
