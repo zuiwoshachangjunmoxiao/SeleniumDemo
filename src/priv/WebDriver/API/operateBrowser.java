@@ -11,9 +11,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 /** 
-* @author ×÷Õß£ºBarryAllen
-* @version ´´½¨Ê±¼ä£º2017Äê9ÔÂ20ÈÕ ÏÂÎç3:33:34 
-* ²Ù×÷ä¯ÀÀÆ÷´°¿Ú 
+* @author ä½œè€…ï¼šBarryAllen
+* @version åˆ›å»ºæ—¶é—´ï¼š2017å¹´9æœˆ20æ—¥ ä¸‹åˆ3:33:34 
+* æ“ä½œæµè§ˆå™¨çª—å£ ï¼ˆï¼‰
 */
 public class operateBrowser {
 	WebDriver driver;
@@ -32,22 +32,22 @@ public class operateBrowser {
 	@Test
 	public void test() throws Exception {
 		
-		//ÉùÃ÷Ò»¸ö Point ¶ÔÏó£¬Á½¸ö150±íÊ¾ä¯ÀÀÆ÷µÄÎ»ÖÃÏà¶ÔÓÚÆÁÄ»µÄ×óÉÏ½Ç£¨0£¬0£©µÄºá×ø±ê¾àÀëºÍ×İ×ø±ê¾àÀë¡£
+		//å£°æ˜ä¸€ä¸ª Point å¯¹è±¡ï¼Œä¸¤ä¸ª150è¡¨ç¤ºæµè§ˆå™¨çš„ä½ç½®ç›¸å¯¹äºå±å¹•çš„å·¦ä¸Šè§’ï¼ˆ0ï¼Œ0ï¼‰çš„æ¨ªåæ ‡è·ç¦»å’Œçºµåæ ‡è·ç¦»ã€‚
 		Point point = new Point(150,150);
-		//ÉùÃ÷ Dimension ¶ÔÏó£¬Á½¸ö500±íÊ¾ä¯ÀÀÆ÷´°¿ÚµÄ³¤¶ÈºÍ¿í¶È
+		//å£°æ˜ Dimension å¯¹è±¡ï¼Œä¸¤ä¸ª500è¡¨ç¤ºæµè§ˆå™¨çª—å£çš„é•¿åº¦å’Œå®½åº¦
 		Dimension dimension = new Dimension(500,500);
 		
-		//setPosition ·½·¨±íÊ¾Éè¶¨ä¯ÀÀÆ÷ÔÚÆÁÄ»ÉÏµÄÎ»ÖÃÎª point ¶ÔÏóµÄ×ø±ê (150,150),Ä³Ğ©ä¯ÀÀÆ÷°æ±¾ÏÂ´Î·½·¨Ê§Ğ§¡£
+		//setPosition æ–¹æ³•è¡¨ç¤ºè®¾å®šæµè§ˆå™¨åœ¨å±å¹•ä¸Šçš„ä½ç½®ä¸º point å¯¹è±¡çš„åæ ‡ (150,150),æŸäº›æµè§ˆå™¨ç‰ˆæœ¬ä¸‹æ¬¡æ–¹æ³•å¤±æ•ˆã€‚
 		driver.manage().window().setPosition(point);
-		//setSize ·½·¨±íÊ¾Éè¶¨ä¯ÀÀÆ÷´°¿ÚµÄ´óĞ¡Îª³¤µÄ 500 ¸öµ¥Î»ºÍ¿íÎª 500 ¸öµ¥Î»¡£
+		//setSize æ–¹æ³•è¡¨ç¤ºè®¾å®šæµè§ˆå™¨çª—å£çš„å¤§å°ä¸ºé•¿çš„ 500 ä¸ªå•ä½å’Œå®½ä¸º 500 ä¸ªå•ä½ã€‚
 		driver.manage().window().setSize(dimension);
 		
-		//getPosition ·½·¨±íÊ¾»ñÈ¡µ±Ç°ä¯ÀÀÆ÷ÔÚÆÁÄ»µÄÎ»ÖÃ£¬Ä³Ğ©ä¯ÀÀÆ÷°æ±¾ÏÂ´Î·½·¨Ê§Ğ§¡£
+		//getPosition æ–¹æ³•è¡¨ç¤ºè·å–å½“å‰æµè§ˆå™¨åœ¨å±å¹•çš„ä½ç½®ï¼ŒæŸäº›æµè§ˆå™¨ç‰ˆæœ¬ä¸‹æ¬¡æ–¹æ³•å¤±æ•ˆã€‚
 		System.out.println(driver.manage().window().getPosition());
-		//getSize ·½·¨±íÊ¾»ñÈ¡µ±Ç°ä¯ÀÀÆ÷´°¿ÚµÄ´óĞ¡¡£
+		//getSize æ–¹æ³•è¡¨ç¤ºè·å–å½“å‰æµè§ˆå™¨çª—å£çš„å¤§å°ã€‚
 		System.out.println(driver.manage().window().getSize());
 		
-		//maximize ·½·¨±íÊ¾½«ä¯ÀÀÆ÷´°¿Ú×î´ó»¯¡£
+		//maximize æ–¹æ³•è¡¨ç¤ºå°†æµè§ˆå™¨çª—å£æœ€å¤§åŒ–ã€‚
 		driver.manage().window().maximize();
 		System.out.println(driver.manage().window().getPosition());
 		System.out.println(driver.manage().window().getSize());
