@@ -19,7 +19,7 @@ public class GetDateTime {
         //利用Date()获取当前时间  
         Date date = new Date();  
                       
-        //格式化时间,并用String对象存储  
+        //格式化时间,并用String对象存储  ()
         String date1 = dateformat.format(date);  
                       
         //打印格式化时间到控制台  
