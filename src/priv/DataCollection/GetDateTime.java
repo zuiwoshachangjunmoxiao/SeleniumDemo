@@ -13,7 +13,7 @@ import com.sun.jna.platform.unix.X11.XClientMessageEvent.Data;
 public class GetDateTime { 
 	
 	public String getDataTime(){
-        //创建一个data format对象  
+        //创建一个data format对象  (测试)
         DateFormat dateformat= new SimpleDateFormat("yyyyMMdd-HHmmss");  
                       
         //利用Date()获取当前时间  
