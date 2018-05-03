@@ -8,7 +8,8 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;  
 import java.util.Date;
 
-import com.sun.jna.platform.unix.X11.XClientMessageEvent.Data;  
+//import com.sun.jna.platform.unix.X11.XClientMessageEvent.Data;
+import java.util.Date;
   
 public class GetDateTime { 
 	
@@ -32,6 +33,9 @@ public class GetDateTime {
     public static void main(String[] args) {  
     	GetDateTime tt = new GetDateTime();
     	tt.getDataTime();
+    	//另一种获取当前时间的方法，最简单的方法如下：
+    	java.sql.Date currentDate = new java.sql.Date(System.currentTimeMillis());
+    	System.out.println(currentDate);
     }  
   
 }  
